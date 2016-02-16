@@ -1,0 +1,41 @@
+<%= form_for(@veeresh_account) do |f| %>
+  <% if @veeresh_account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@veeresh_account.errors.count, "error") %> prohibited this veeresh_account from being saved:</h2>
+
+      <ul>
+      <% @veeresh_account.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :no_of_tickets_online %><br>
+    <%= f.number_field :no_of_tickets_online %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_tickets_box %><br>
+    <%= f.number_field :no_of_tickets_box %>
+  </div>
+  <div class="field">
+    <%= f.label :total_amt_per_day %><br>
+    <%= f.number_field :total_amt_per_day %>
+  </div>
+  <div class="field">
+    <%= f.label :booking_id %><br>
+    <%= f.number_field :booking_id %>
+  </div>
+  <div class="field">
+    <%= f.label :cinema_id %><br>
+    <%= f.number_field :cinema_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216103722) do
+ActiveRecord::Schema.define(version: 20160216105631) do
 
   create_table "bookings", force: :cascade do |t|
     t.date     "day"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20160216103722) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "cinemas", force: :cascade do |t|
+    t.string   "screen_name"
+    t.string   "seat_name"
+    t.string   "seat_type"
+    t.string   "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "feedbacks", force: :cascade do |t|
     t.string   "seating_comfort"
     t.string   "ac"
@@ -34,6 +43,36 @@ ActiveRecord::Schema.define(version: 20160216103722) do
     t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "language"
+    t.time     "duration"
+    t.date     "release_date"
+    t.integer  "cinema_id"
+    t.integer  "review_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "imdb_rating"
+    t.string   "times_of_india"
+    t.string   "user_rating"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "veeresh_accounts", force: :cascade do |t|
+    t.integer  "no_of_tickets_online"
+    t.integer  "no_of_tickets_box"
+    t.integer  "total_amt_per_day"
+    t.integer  "booking_id"
+    t.integer  "cinema_id"
+    t.integer  "user_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end

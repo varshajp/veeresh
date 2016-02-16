@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :reviews
+  resources :cinemas
+  resources :veeresh_accounts
+  resources :movies
   resources :feedbacks
   resources :bookings
   # The priority is based upon order of creation: first created -> highest priority.

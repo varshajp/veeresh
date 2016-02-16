@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_of_tickets_online: 1
+  no_of_tickets_box: 1
+  total_amt_per_day: 1
+  booking_id: 1
+  cinema_id: 1
+  user_id: 1
+
+two:
+  no_of_tickets_online: 1
+  no_of_tickets_box: 1
+  total_amt_per_day: 1
+  booking_id: 1
+  cinema_id: 1
+  user_id: 1

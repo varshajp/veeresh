@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  language: MyString
+  duration: 2016-02-16 16:18:47
+  release_date: 2016-02-16
+  cinema_id: 1
+  review_id: 1
+
+two:
+  name: MyString
+  language: MyString
+  duration: 2016-02-16 16:18:47
+  release_date: 2016-02-16
+  cinema_id: 1
+  review_id: 1

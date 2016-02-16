@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Veeresh Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>No of tickets online</th>
+      <th>No of tickets box</th>
+      <th>Total amt per day</th>
+      <th>Booking</th>
+      <th>Cinema</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @veeresh_accounts.each do |veeresh_account| %>
+      <tr>
+        <td><%= veeresh_account.no_of_tickets_online %></td>
+        <td><%= veeresh_account.no_of_tickets_box %></td>
+        <td><%= veeresh_account.total_amt_per_day %></td>
+        <td><%= veeresh_account.booking_id %></td>
+        <td><%= veeresh_account.cinema_id %></td>
+        <td><%= veeresh_account.user_id %></td>
+        <td><%= link_to 'Show', veeresh_account %></td>
+        <td><%= link_to 'Edit', edit_veeresh_account_path(veeresh_account) %></td>
+        <td><%= link_to 'Destroy', veeresh_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Veeresh account', new_veeresh_account_path %>

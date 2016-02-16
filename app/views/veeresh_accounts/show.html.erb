@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No of tickets online:</strong>
+  <%= @veeresh_account.no_of_tickets_online %>
+</p>
+
+<p>
+  <strong>No of tickets box:</strong>
+  <%= @veeresh_account.no_of_tickets_box %>
+</p>
+
+<p>
+  <strong>Total amt per day:</strong>
+  <%= @veeresh_account.total_amt_per_day %>
+</p>
+
+<p>
+  <strong>Booking:</strong>
+  <%= @veeresh_account.booking_id %>
+</p>
+
+<p>
+  <strong>Cinema:</strong>
+  <%= @veeresh_account.cinema_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @veeresh_account.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_veeresh_account_path(@veeresh_account) %> |
+<%= link_to 'Back', veeresh_accounts_path %>
