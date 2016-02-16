@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @booking.day %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @booking.show %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @booking.type %>
+</p>
+
+<p>
+  <strong>Number of seats:</strong>
+  <%= @booking.number_of_seats %>
+</p>
+
+<p>
+  <strong>T c:</strong>
+  <%= @booking.t_c %>
+</p>
+
+<p>
+  <strong>Cinema:</strong>
+  <%= @booking.cinema_id %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
