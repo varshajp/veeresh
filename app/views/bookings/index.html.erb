@@ -18,8 +18,8 @@
   <tbody>
     <% @bookings.each do |booking| %>
       <tr>
-        <td><%= booking.day %></td>
-        <td><%= booking.show %></td>
+        <td><%= booking.day.strftime("%A %d")  %></td>
+        <td><%= booking.show.strftime("%H : %M") %></td>
         <td><%= booking.type %></td>
         <td><%= booking.number_of_seats %></td>
         <td><%= booking.t_c %></td>

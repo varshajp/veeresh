@@ -12,12 +12,12 @@
 
 <p>
   <strong>Duration:</strong>
-  <%= @movie.duration %>
+  <%= @movie.duration.strftime("%H : %M") %>
 </p>
 
 <p>
   <strong>Release date:</strong>
-  <%= @movie.release_date %>
+  <%= @movie.release_date.strftime("%d %b %Y")%>
 </p>
 
 <p>

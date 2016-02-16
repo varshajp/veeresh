@@ -4,10 +4,35 @@
   <title>Veeresh</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <%= javascript_include_tag :defaults %>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Veeresh cinemas</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><%= link_to "Movies", new_movie_path %><span class="sr-only">(current)</span></li>
+      <li class="active"><%= link_to "Feedback" , new_feedback_path %><span class="sr-only">(current)</span></li>
+      <li class="active"><%= link_to "Veeresh" , new_veeresh_account_path %><span class="sr-only">(current)</span></li>
+      <li class="active"><%= link_to "Cinema", new_cinema_path %><span class="sr-only">(current)</span></li>
+     <li class="active"><%= link_to "Booking", new_booking_path %><span class="sr-only">(current)</span></li>
+     <li class="active"><%= link_to "Review", new_review_path %><span class="sr-only">(current)</span></li>
+     
+    </ul>
+  </div>
+</nav>
 <%= yield %>
 
 </body>

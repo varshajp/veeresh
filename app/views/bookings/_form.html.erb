@@ -13,28 +13,31 @@
 
   <div class="field">
     <%= f.label :day %><br>
-    <%= f.date_select :day %>
+    <%= f.date_select :day , order: [:day, :month],include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :show %><br>
-    <%= f.time_select :show %>
+    <%= f.select :show,["10:00AM","1:00PM","4:00PM","7:00PM"], include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <%= f.collection_select :cinema_id, Cinema.all,:id,:seat_type %>
   </div>
+
+  
   <div class="field">
     <%= f.label :number_of_seats %><br>
-    <%= f.number_field :number_of_seats %>
+    <%= f.select :number_of_seats,(1..10),include_blank:true %>
   </div>
+
   <div class="field">
     <%= f.label :t_c %><br>
     <%= f.check_box :t_c %>
   </div>
-  <div class="field">
-    <%= f.label :cinema_id %><br>
-    <%= f.number_field :cinema_id %>
-  </div>
+
+  <%= f.hidden_field :cinema_id,:value => params[:cinema_id] %>
+
+  
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Day:</strong>
-  <%= @booking.day %>
+  <%= @booking.day.strftime("%A %d") %>
 </p>
 
 <p>
   <strong>Show:</strong>
-  <%= @booking.show %>
+  <%= @booking.show.strftime("%H : %M") %>
 </p>
 
 <p>

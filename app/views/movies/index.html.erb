@@ -20,8 +20,8 @@
       <tr>
         <td><%= movie.name %></td>
         <td><%= movie.language %></td>
-        <td><%= movie.duration %></td>
-        <td><%= movie.release_date %></td>
+        <td><%= movie.duration.strftime("%H : %M") %></td>
+        <td><%= movie.release_date.strftime("%d %b %Y") %></td>
         <td><%= movie.cinema_id %></td>
         <td><%= movie.review_id %></td>
         <td><%= link_to 'Show', movie %></td>

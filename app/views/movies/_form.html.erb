@@ -24,17 +24,15 @@
     <%= f.time_select :duration %>
   </div>
   <div class="field">
-    <%= f.label :release_date %><br>
+    <%= f.label :release_date , order: [:day, :month, :year],include_blank: true %><br>
     <%= f.date_select :release_date %>
   </div>
-  <div class="field">
-    <%= f.label :cinema_id %><br>
-    <%= f.number_field :cinema_id %>
-  </div>
-  <div class="field">
-    <%= f.label :review_id %><br>
-    <%= f.number_field :review_id %>
-  </div>
+
+
+  <%= f.hidden_field :cinema_id,:value => params[:cinema_id] %>
+
+  <%= f.hidden_field :review_id,:value => params[:review_id] %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
